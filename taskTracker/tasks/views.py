@@ -20,5 +20,12 @@ class TaskDetailView(DetailView):
 
 class TaskCreateView(CreateView):
     model = Task
-    fields = 
-# Create your views here.
+    fields = ['name_text', 'desc_text', 'proj_text', 'status']
+
+class TaskUpdateView(UpdateView):
+    model = Task
+    fields = ['name_text', 'desc_text', 'proj_text', 'status']
+
+class TaskDeleteView(DeleteView):
+    model = Task
+    success_url = reverse_lazy('task-list')
