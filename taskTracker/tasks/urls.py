@@ -7,7 +7,7 @@ urlpatterns = [
     # First list view, main view 
     path('index/', views.index, name='main-view'),
     # Feature 1
-    path('featureone/', views.featureOne(), name='feature'),   
+    path('featureone/', views.featureOne.as_view(), name='feature'),   
     # Features 2-6
     path('features/', views.feature2through6.as_view(), name='featurestwothroughsix'),
     # Feature 7
