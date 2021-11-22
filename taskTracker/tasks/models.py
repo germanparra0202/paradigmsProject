@@ -11,7 +11,7 @@ class Task(models.Model):
     def __str__(self):
         return f"{self.id}: {self.name_text}"
 
-class Choice(models.Model):
+class TimeEntry(models.Model):
     task = models.ForeignKey(Task, on_delete=models.CASCADE)
     start_time = models.DateTimeField()
     end_time   = models.DateTimeField()
