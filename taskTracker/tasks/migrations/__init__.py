@@ -9,7 +9,7 @@ class Migration(migrations.Migtation):
 
     operations = [
         migrations.CreateModel(
-            name = 'Task'
+            name = 'Task',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('name_text', models.CharField(max_length=200)),
@@ -19,7 +19,7 @@ class Migration(migrations.Migtation):
             ],
         ),
         migrations.CreateModel(
-            name = 'TimeEntry'
+            name = 'TimeEntry',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('task', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=tasks.task)),
