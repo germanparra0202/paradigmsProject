@@ -23,7 +23,7 @@ urlpatterns = [
     # Index View 
     path('',views.IndexView.as_view(), name='index'),   
     # Features 1-6
-    path('<int:question_id>/tasks/', views.firstSixFeaturesQuestions.as_view(), name='features'),
+    #path('<int:question_id>/tasks/', views.firstSixFeaturesQuestions.as_view(), name='features'),
     # Feature 7
     path('<int:question_id>/taskSeven/', views.QuestionSevenView.as_view(), name='featureSeven'),
     # Feature 8
