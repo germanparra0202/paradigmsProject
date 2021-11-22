@@ -17,9 +17,17 @@ from django.urls import path
 
 from . import views
 
+app_name = "tasks"
+
 urlpatterns = [
-    path('',views.IndexView.as_view(), name='index'),                     # ex: /polls/
-    path('<int:question_id>/', views.QuestionDetailView.as_view(), name='detail'),              # ex: /polls/5/
-    path('<int:question_id>/results/', views.ResultsView.as_view(), name='results'),    # ex: /polls/5/results/
-    path('<int:question_id>/vote/', views.vote, name='vote'),             # ex: /polls/5/vote/
+    # Index View 
+    path('',views.IndexView.as_view(), name='index'),   
+    # Features 1-6
+    path('<int:question_id>/tasks/', views.firstSixFeaturesQuestions.as_view(), name='features'),
+    # Feature 7
+    path('<int:question_id>/taskSeven/', views.QuestionSevenView.as_view(), name='featureSeven'),
+    # Feature 8
+    path('<int:question_id>/taskEight/', views.QuestionEightView.as_view(), name='featureEight'),
+    # Results from features 
+    path('<int:question_id>/results/', views.ResultsView.as_view(), name='results')  
 ]
