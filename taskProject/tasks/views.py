@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Core
+from .models import Task
 from django.views.generic import ListView, DetailView, UpdateView
 
 # Create your views here.
