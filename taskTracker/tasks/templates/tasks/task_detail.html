@@ -1,0 +1,18 @@
+{% extends "tasks/base.html" %}
+{% block content %}
+  <article class="media content-section">
+    <div class="media-body">
+      <div class="article-metadata">
+        <a class="mr-2" href="#">{{ object.author }}</a>
+        <div>
+            <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'task-update' object.id %}">Update</a>
+            <a class="btn btn-danger btn-sm mt-1 mb-1" href="{% url 'task-delete' object.id %}">Delete</a>
+        </div>
+      </div>
+      <h2 class="task-name">{{ object.name_text }}</h2>
+      <h3 class="task-proj">{{ object.proj_text }}</h3>
+      <p class="task-desc">{{ object.desc_text }}</p>
+      <p class="task-stat">{{ object.status }}</p>
+    </div>
+  </article>
+{% endblock content %}
