@@ -5,7 +5,7 @@ app_name = "tasks"
 
 urlpatterns = [
     # Main Window 
-    path('', views.MainView.as_view(), name='main-view'),
+    path('', views.MainView.as_view(), name='task-main'),
     # Detail View
     path('<int:pk>/', views.TaskDetailView.as_view(), name='task-detail'),
     # Feature 1 --> Create
