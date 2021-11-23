@@ -33,6 +33,7 @@ class EditView(UpdateView):
     fields = '__all__'
     pk_url_kwarg = 'pk'
     success_url = reverse_lazy('tasks:tasks')
+    
 
 class Delete(DeleteView):
     model = Task
