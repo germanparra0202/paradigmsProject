@@ -45,15 +45,10 @@ body {
     text-decoration: none;
   }
   
-  .article-content {
+  .task-description {
     white-space: pre-line;
   }
   
-  .article-img {
-    height: 65px;
-    width: 65px;
-    margin-right: 16px;
-  }
   
   .article-metadata {
     padding-bottom: 1px;
