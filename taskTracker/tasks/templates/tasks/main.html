@@ -5,9 +5,8 @@
           <div class="media-body">
             <div class="article-metadata">
               <a class="mr-2" href="#">{{ task.name_task }}</a>
-              <small class="text-muted">{{ post.date_posted|date:"F d, Y" }}</small>
+              <small class="text-muted">{{ task.proj_task }}</small>
             </div>
-            <h2><a class="article-title" href="{% url 'post-detail' post.id %}">{{ post.title }}</a></h2>
             <p class="task-description">{{ task.desc_task }}</p>
           </div>
         </article>

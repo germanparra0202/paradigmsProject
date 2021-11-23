@@ -7,7 +7,7 @@ from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .models import Task
 
 class MainView(ListView):
-    model = Post
+    model = Task
     template_name = 'tasks/main.html'
     context_object_name = 'main-view'
 
