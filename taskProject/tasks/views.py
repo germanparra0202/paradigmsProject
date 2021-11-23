@@ -12,3 +12,8 @@ class SingleView(DetailView):
     model = Task
     template_name = 'tasks/single.html'
     context_object_name = 'task'
+
+class TasksView(ListView):
+    model = Task
+    template_name = 'tasks/tasks.html'
+    context_object_name = 'task_list'
