@@ -8,7 +8,7 @@ from .models import Task, TimeEntry
 
 class MainView(ListView):
     template_name = 'tasks/main.html'
-    context_object_name = 'tasks_list'
+    context_object_name = 'main-list'
 
     def get_taskset(self):
         """Return a list of the user's tasks."""
@@ -28,4 +28,4 @@ class TaskUpdateView(UpdateView):
 
 class TaskDeleteView(DeleteView):
     model = Task
-    success_url = reverse_lazy('task-list')
+    success_url = reverse_lazy('main-list')
