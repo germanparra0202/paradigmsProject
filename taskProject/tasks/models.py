@@ -9,7 +9,7 @@ class Task(models.Model):
     status = models.BooleanField(default=True)
 
     def get_absolute_url(self):
-        return reverse('tasks:single', args=[self.id])
+        return reverse('tasks:single', kwargs={'pk':self.pk})
     
     class Meta:
         ordering = ['-id']

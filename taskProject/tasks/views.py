@@ -12,6 +12,7 @@ class IndexView(ListView):
 
 class SingleView(DetailView):
     model = Task
+    pk_url_kwarg = 'pk'
     template_name = 'tasks/single.html'
     context_object_name = 'task'
 
@@ -24,4 +25,17 @@ class AddView(CreateView):
     model = Task
     template_name = 'tasks/add.html'
     fields = '__all__'
+    success_url = reverse_lazy('tasks:tasks')
+
+class EditView(UpdateView):
+    model = Task
+    template_name = 'tasks/edit.html'
+    fields = '__all__'
+    pk_url_kwarg = 'pk'
+    success_url = reverse_lazy('tasks:tasks')
+
+class Delete(DeleteView):
+    model = Task
+    template_name = 'tasks/confirm-delete.html'
+    pk_url_kwarg = 'pk'
     success_url = reverse_lazy('tasks:tasks')
