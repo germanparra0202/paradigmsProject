@@ -4,19 +4,15 @@ from django.urls import reverse_lazy
 from django.views.generic import ListView, DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 
-from .models import Task, TimeEntry
+from .models import Task
 
 class MainView(ListView):
-    template_name = 'tasks/main.html'
-    context_object_name = 'main-list'
-
-    def get_taskset(self):
-        """Return a list of the user's tasks."""
-        return Task.objects
+    model = Post
+    template_name = 'task/main.html'
+    context_object_name = 'main-view'
 
 class TaskDetailView(DetailView):
     model = Task
-    template_name = 'tasks/detail.html'
 
 class TaskCreateView(CreateView):
     model = Task
@@ -28,4 +24,4 @@ class TaskUpdateView(UpdateView):
 
 class TaskDeleteView(DeleteView):
     model = Task
-    success_url = reverse_lazy('main-list')
+    success_url = '/'
