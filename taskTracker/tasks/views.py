@@ -8,7 +8,7 @@ from .models import Task
 
 class MainView(ListView):
     model = Post
-    template_name = 'task/main.html'
+    template_name = 'tasks/main.html'
     context_object_name = 'main-view'
 
 class TaskDetailView(DetailView):
