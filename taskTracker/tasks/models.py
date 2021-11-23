@@ -12,7 +12,7 @@ class Task(models.Model):
         return f"{self.id}: {self.name_text}"
 
     def get_absolute_url(self):
-        return reverse('task-url', kwargs{ 'pk' : self.pk)
+        return reverse('task-detail', kwargs = { 'pk' : self.pk})
 
 '''class TimeEntry(models.Model):
     task = models.ForeignKey(Task, on_delete=models.CASCADE)
