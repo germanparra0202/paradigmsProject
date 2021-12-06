@@ -17,3 +17,10 @@ class Task(models.Model):
     def __str__(self):
         return self.name
 
+class TimeEntry(models.Model):
+    task = models.ForeignKey(Task, on_delete=models.CASCADE)
+    start_time = models.DateTimeField()
+    end_time   = models.DateTimeField()
+    
+    def __str__(self):
+        return f"{self.id}: {self.start_time} {self.end_time}
